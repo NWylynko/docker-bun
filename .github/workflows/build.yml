@@ -21,8 +21,8 @@ jobs:
         with:
           node-version: 18.7.0
 
-      - run: yarn
+      - run: cd build && yarn
 
-      - run: yarn build
+      - run: cd build && yarn build
 
-      - run: node dist --token ${{ secrets.docker_token }}
+      - run: cd build && node dist --token ${{ secrets.docker_token }}
