@@ -6,23 +6,23 @@ name: Build new release
 on:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron:  '0 0 * * *'
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Use Node.js v18.7.0
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18.7.0
-        
-    - run: yarn
-    
-    - run: yarn build
-    
-    - run: node dist --token ${{ secrets.docker_token }}
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js v18.7.0
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.7.0
+
+      - run: yarn
+
+      - run: yarn build
+
+      - run: node dist --token ${{ secrets.docker_token }}
