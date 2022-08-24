@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "dev": "docker-compose up --build",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.1",
+    "@types/node": "^18.7.13",
+    "typescript": "^4.7.4"
+  }
+}

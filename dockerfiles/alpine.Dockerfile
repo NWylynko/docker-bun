@@ -1,7 +1,6 @@
 # Found here https://github.com/oven-sh/bun/issues/211#issuecomment-1180644348
 
 ### GLOBALS ###
-ARG BUN_VERSION
 ARG GLIBC_VERSION='2.34-r0'
 
 
@@ -13,8 +12,8 @@ WORKDIR /tmp
 RUN apk --update add curl unzip
 
 # get bun
-ARG BUN_VERSION
-RUN curl -LO https://github.com/oven-sh/bun/releases/download/bun-v${BUN_VERSION}/bun-linux-x64.zip && \
+ARG BUN_URL
+RUN curl -LO ${BUN_URL} && \
   unzip bun-linux-x64.zip
 
 # get glibc
