@@ -45,7 +45,7 @@ const main = async () => {
 
   await runner(loginCommand)
 
-  const flavours = [`alpine`];
+  const flavours = [`alpine`, `ubuntu`];
 
   for (const flavour of flavours) {
 
