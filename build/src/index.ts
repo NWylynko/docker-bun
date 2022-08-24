@@ -1,5 +1,5 @@
 import { getLatestRelease } from './github';
-import { getKnownLatestReleaseDate } from "./loadrelease"
+import { getKnownLatestReleaseDate, setKnownLatestReleaseDate } from "./release"
 import { runner } from './runner';
 import utils from "node:util"
 
@@ -64,6 +64,8 @@ const main = async () => {
     await runner(pushCommand)
 
   }
+
+  await setKnownLatestReleaseDate(newestRelease.published_at)
 
 }
 

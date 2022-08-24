@@ -58,8 +58,8 @@ export interface Asset {
   state: string;
   size: number;
   download_count: number;
-  created_at: Date;
-  updated_at: Date;
+  created_at: string;
+  updated_at: string;
   browser_download_url: string;
 }
 
@@ -89,8 +89,8 @@ export interface LatestRelease {
   name: string;
   draft: boolean;
   prerelease: boolean;
-  created_at: Date;
-  published_at: Date;
+  created_at: string;
+  published_at: string;
   assets: Asset[];
   tarball_url: string;
   zipball_url: string;
