@@ -26,3 +26,7 @@ jobs:
       - run: cd build && yarn build
 
       - run: cd build && node dist --token ${{ secrets.docker_token }}
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: ./latestrelease
