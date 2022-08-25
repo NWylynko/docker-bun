@@ -1,4 +1,5 @@
 # Found here https://github.com/oven-sh/bun/issues/211#issuecomment-1180644348
+# builds but does not run
 
 ### GLOBALS ###
 ARG GLIBC_VERSION='2.34-r0'
